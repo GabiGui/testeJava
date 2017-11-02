@@ -1,9 +1,9 @@
-//classe de metodos
+//classe de métodos
 
 import java.sql.*;
 
 public class Metodos {
-    public String query, nm, cpf;
+    public String query, nm, cpf, status;
     public float vl;
     public int id;
     public boolean active;
@@ -30,7 +30,9 @@ public class Metodos {
                  nm = rs.getString("nm_customer");
                  active = rs.getBoolean("is_active");
                  vl = rs.getFloat("vl_total");
-                 System.out.println("ID: " + id + " | CPF/CNPJ " + cpf + " | NOME:  " + nm + " | STATUS " + active + " | SALDO R$" + vl);
+
+                 if(active = true)status = "ativo"; else status = "inativo";
+                 System.out.println("ID: " + id + " | CPF/CNPJ " + cpf + " | NOME:  " + nm + " | STATUS " + status + " | SALDO " + String.format("R$%.2f", vl));
              }
          }
          catch(SQLException ex){
