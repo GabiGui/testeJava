@@ -32,7 +32,7 @@ public class Metodos {
                  vl = rs.getFloat("vl_total");
 
                  if(active = true)status = "ativo"; else status = "inativo";
-                 System.out.println("ID: " + id + " | CPF/CNPJ " + cpf + " | NOME:  " + nm + " | STATUS " + status + " | SALDO " + String.format("R$%.2f", vl));
+                 System.out.println("ID: " + id + " | CPF/CNPJ: " + cpf + " | NOME:  " + nm + " | STATUS: " + status + " | SALDO: " + String.format("R$%.2f", vl));
              }
          }
          catch(SQLException ex){
